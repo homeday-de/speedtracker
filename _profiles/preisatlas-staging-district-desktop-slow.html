@@ -16,7 +16,7 @@ default: false
 # with a minimum value of 12, as only two scheduled tests per day are allowed.
 # To disabled repeated tests, simply remove this property from the profile.
 #
-interval: 12
+interval: 24
 
 #
 # WebPageTest test parameters.
@@ -25,7 +25,8 @@ interval: 12
 # https://www.npmjs.com/package/webpagetest
 #
 parameters:
-  location: "ec2-eu-central-1:Chrome.3G"
+  location: "ec2-eu-central-1:Chrome"
+  connectivity: "3G"
   runs: 3
   firstViewOnly: true
   url: "https://pe.staging.homeday.de/de/preisatlas/berlin/mitte"
